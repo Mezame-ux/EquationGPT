@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT with Equation Editor</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .chat-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        .equation-output {
+            margin-top: 10px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>ChatGPT with Equation Editor</h1>
+        <div class="input-container">
+            <textarea id="equationInput" rows="4" cols="50" placeholder="Type LaTeX equation here..."></textarea><br>
+            <button onclick="renderEquation()">Render Equation</button>
+        </div>
+        <div class="equation-output" id="equationOutput"></div>
+    </div>
+
+    <script>
+        function renderEquation() {
+            const input = document.getElementById('equationInput').value;
+            const output = document.getElementById('equationOutput');
+            output.innerHTML = '\\[' + input + '\\]';
+            MathJax.typesetPromise([output]);
+        }
+    </script>
+</body>
+</html>
