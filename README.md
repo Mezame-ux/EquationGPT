@@ -18,6 +18,8 @@ Welcome to the ChatGPT Equation Editor project! This project integrates an equat
 
 To run this project locally, follow these steps:
 
+A ChatGPT API key is required
+
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/your-username/ChatGPT-Equation-Editor.git
