@@ -1,0 +1,16 @@
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore environment-specific files
+.env
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore Flask specific files
+*.pyc
+
+# Ignore MathJax and Polyfill cached files
+/polyfill.min.js
+/tex-mml-chtml.js
